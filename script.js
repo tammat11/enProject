@@ -3,8 +3,8 @@ const products = [
     id: 1,
     title: "Cloudline Hoodie",
     category: "hoodies",
-    price: 39,
-    oldPrice: 52,
+    price: 16990,
+    oldPrice: 19990,
     sizes: ["S", "M", "L", "XL"],
     description:
       "Oversized everyday hoodie in a soft neutral tone for campus mornings, coffee runs, and lazy late-night city walks.",
@@ -28,8 +28,8 @@ const products = [
     id: 2,
     title: "Street Ease Jeans",
     category: "jeans",
-    price: 42,
-    oldPrice: 56,
+    price: 18990,
+    oldPrice: 22990,
     sizes: ["28", "30", "32", "34"],
     description:
       "Straight-leg jeans with a casual modern fit that works for classes, daily plans, and low-effort street looks.",
@@ -53,8 +53,8 @@ const products = [
     id: 3,
     title: "Cotton Mood Tee",
     category: "t-shirts",
-    price: 22,
-    oldPrice: 29,
+    price: 8990,
+    oldPrice: 10990,
     sizes: ["XS", "S", "M", "L"],
     description:
       "Clean cotton t-shirt with an easy silhouette and a minimal look that slides into almost any outfit.",
@@ -75,36 +75,11 @@ const products = [
     source: "https://unsplash.com/photos/a-white-shirt-on-a-white-background-4rUYuwJ2vGw",
   },
   {
-    id: 4,
-    title: "Evening Flow Dress",
-    category: "dresses",
-    price: 48,
-    oldPrice: 63,
-    sizes: ["S", "M", "L"],
-    description:
-      "A simple party-ready dress with a fluid shape, soft drape, and enough elegance for evening plans.",
-    badge: "Party pick",
-    material: "Smooth satin blend",
-    fit: "Slim flowing fit",
-    occasion: "Parties and events",
-    delivery: "2-4 days",
-    story:
-      "This one leans into the project brief directly: modern, stylish, and easy. It does not scream for attention like a drunk uncle at a wedding, but it definitely gets noticed.",
-    highlights: [
-      "Elegant shape with clean movement",
-      "Works with heels or simple accessories",
-      "Strong event piece without losing comfort",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1765229285144-9adddf61410e?auto=format&fit=crop&w=900&q=80",
-    source: "https://unsplash.com/photos/a-woman-in-a-long-elegant-green-dress-IT-x_jevbw8",
-  },
-  {
     id: 5,
     title: "Campus Mini Crossbody",
     category: "accessories",
-    price: 26,
-    oldPrice: 34,
+    price: 12990,
+    oldPrice: 15990,
     sizes: ["One size"],
     description:
       "Compact crossbody bag for essentials, perfect for students and busy people who want style without bulk.",
@@ -117,7 +92,7 @@ const products = [
       "A small bag can save an outfit or kill it stone dead. This one keeps it sharp and practical without looking like your stuff is packed into a sad little lunchbox.",
     highlights: [
       "Hands-free daily carry",
-      "Works with hoodies, denim, and dresses",
+      "Works with hoodies, denim, and tees",
       "Minimal silhouette with enough structure",
     ],
     image:
@@ -128,8 +103,8 @@ const products = [
     id: 6,
     title: "Linen Touch Sweater",
     category: "hoodies",
-    price: 44,
-    oldPrice: 58,
+    price: 17990,
+    oldPrice: 21990,
     sizes: ["S", "M", "L"],
     description:
       "Lightweight sweater with a breathable feel that keeps the cozy side of the brand without overheating the whole fit.",
@@ -153,8 +128,8 @@ const products = [
     id: 7,
     title: "Night Shift Hoodie",
     category: "hoodies",
-    price: 41,
-    oldPrice: 55,
+    price: 17490,
+    oldPrice: 20990,
     sizes: ["M", "L", "XL"],
     description:
       "Dark pullover hoodie for colder evenings, simple street styling, and that low-key clean look people always chase.",
@@ -178,8 +153,8 @@ const products = [
     id: 8,
     title: "Brown Note Purse",
     category: "accessories",
-    price: 31,
-    oldPrice: 40,
+    price: 14990,
+    oldPrice: 17990,
     sizes: ["One size"],
     description:
       "Structured brown purse with a polished finish for simple outfits that need one richer detail.",
@@ -241,7 +216,7 @@ function formatCategory(category) {
 }
 
 function formatPrice(value) {
-  return `$${value}`;
+  return `${new Intl.NumberFormat("ru-RU").format(value)} KZT`;
 }
 
 function updateBagCount() {
