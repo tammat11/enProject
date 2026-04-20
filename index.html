@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meoowl Store | Modern Clothing Catalog</title>
+    <meta
+      name="description"
+      content="Meoowl Store is a modern online clothing catalog with trendy, affordable pieces for everyday life, university, and parties."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Meoowl Store home">
+          <span class="brand-mark">M</span>
+          <span>
+            <strong>Meoowl Store</strong>
+            <small>Modern Clothing Shop</small>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a href="#catalog">Catalog</a>
+          <a href="#about">About</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <a class="button button-secondary" href="#catalog">Shop now</a>
+          <button class="bag-pill" id="bagButton" type="button" aria-label="Shopping bag">
+            Bag <span id="bagCount">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Cozy trends for everyday style</p>
+            <h1>Affordable fashion that feels current, comfy, and easy to shop.</h1>
+            <p class="hero-text">
+              Meoowl Store helps students and busy people find stylish clothes in one
+              fast online catalog. Discover pieces for university, daily life, and parties
+              with secure payment and quick delivery.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button" href="#catalog">Browse collection</a>
+              <a class="button button-ghost" href="#about">Why Meoowl</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Store highlights">
+              <li><strong>5</strong><span>Main categories</span></li>
+              <li><strong>100%</strong><span>Responsive layout</span></li>
+              <li><strong>24/7</strong><span>Easy online access</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-image">
+              <img src="assets/hero-fashion.svg" alt="Fashion collage illustration" />
+            </div>
+            <div class="hero-card-info">
+              <span class="chip">New drop</span>
+              <h2>Warm neutrals. Simple flow. Trend-first catalog.</h2>
+              <p>
+                Soft beige, dark brown, clean cards, and quick product discovery built from
+                the project brief.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="category-strip" aria-label="Shop categories">
+          <article class="category-card">
+            <span>01</span>
+            <h3>Hoodies</h3>
+            <p>Soft layers for campus mornings and late city walks.</p>
+          </article>
+          <article class="category-card">
+            <span>02</span>
+            <h3>Jeans</h3>
+            <p>Relaxed fits and easy styling for everyday wear.</p>
+          </article>
+          <article class="category-card">
+            <span>03</span>
+            <h3>T-Shirts</h3>
+            <p>Clean basics, cotton comfort, and trend-ready shades.</p>
+          </article>
+          <article class="category-card">
+            <span>04</span>
+            <h3>Dresses</h3>
+            <p>Simple silhouettes for parties, outings, and casual looks.</p>
+          </article>
+          <article class="category-card">
+            <span>05</span>
+            <h3>Accessories</h3>
+            <p>Small details that finish the fit without overthinking it.</p>
+          </article>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Catalog</p>
+              <h2>Find your look in a few clicks</h2>
+            </div>
+            <p>
+              Each product includes a clear image, short description, price, and available
+              sizes, just like the project requires.
+            </p>
+          </div>
+
+          <div class="catalog-toolbar">
+            <label class="search">
+              <span class="sr-only">Search products</span>
+              <input id="searchInput" type="search" placeholder="Search hoodies, jeans, dresses..." />
+            </label>
+
+            <div class="filters" role="tablist" aria-label="Category filters">
+              <button class="filter-button is-active" data-filter="all">All</button>
+              <button class="filter-button" data-filter="hoodies">Hoodies</button>
+              <button class="filter-button" data-filter="jeans">Jeans</button>
+              <button class="filter-button" data-filter="t-shirts">T-Shirts</button>
+              <button class="filter-button" data-filter="dresses">Dresses</button>
+              <button class="filter-button" data-filter="accessories">Accessories</button>
+            </div>
+          </div>
+
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="about-section" id="about">
+          <div class="about-card">
+            <p class="eyebrow">About the project</p>
+            <h2>Built around a simple goal: stylish clothes in one easy place.</h2>
+            <p>
+              The idea behind Meoowl Store is to help young people buy modern, comfortable,
+              and affordable clothing without wasting time in malls. The store focuses on a
+              clean shopping experience inspired by social media trends.
+            </p>
+          </div>
+
+          <div class="about-list">
+            <article>
+              <h3>Who it helps</h3>
+              <p>Students, busy people, and anyone who wants trendy outfits without high prices.</p>
+            </article>
+            <article>
+              <h3>What makes it special</h3>
+              <p>Warm visuals, quick browsing, secure checkout, and category-first navigation.</p>
+            </article>
+            <article>
+              <h3>Where it works</h3>
+              <p>Phones and computers, with a smooth responsive layout and no clutter.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="benefits-section" id="benefits">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Why customers choose us</p>
+              <h2>Fast, safe, and actually pleasant to use</h2>
+            </div>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <h3>Simple navigation</h3>
+              <p>Clear categories let customers jump straight to what they want.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Secure payment</h3>
+              <p>Designed to support Visa, Mastercard, American Express, and other popular methods.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Fast delivery</h3>
+              <p>Products are ready for quick online ordering with home delivery.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Fair pricing</h3>
+              <p>Affordable fashion with regular discounts and trend-focused collections.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="promo-section">
+          <div class="promo-copy">
+            <p class="eyebrow">Payments and updates</p>
+            <h2>Safe checkout, regular new arrivals, and special campaigns.</h2>
+            <p>
+              Follow Meoowl Store online to stay updated on fresh drops, direct mail offers,
+              and social media campaigns featuring our latest items.
+            </p>
+          </div>
+
+          <div class="payment-card">
+            <h3>Accepted payment methods</h3>
+            <div class="payments" aria-label="Supported payment methods">
+              <span>Visa</span>
+              <span>Mastercard</span>
+              <span>American Express</span>
+              <span>Apple Pay</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer" id="contact">
+        <div>
+          <strong>Meoowl Store</strong>
+          <p>Modern clothing catalog for comfortable, stylish, and affordable shopping.</p>
+          <p class="credit-note">Product photography uses curated Unsplash images for demo catalog presentation.</p>
+        </div>
+        <div>
+          <span>Email</span>
+          <a href="mailto:hello@meoowlstore.com">hello@meoowlstore.com</a>
+        </div>
+        <div>
+          <span>Instagram</span>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">@meoowlstore</a>
+        </div>
+      </footer>
+    </div>
+
+    <template id="productCardTemplate">
+      <article class="product-card">
+        <div class="product-visual">
+          <img alt="" />
+          <span class="product-badge"></span>
+        </div>
+        <div class="product-copy">
+          <div class="product-meta">
+            <span class="product-category"></span>
+            <span class="product-price"></span>
+          </div>
+          <h3 class="product-title"></h3>
+          <p class="product-description"></p>
+          <div class="product-footer">
+            <p class="product-sizes"></p>
+            <div class="product-actions">
+              <button class="button button-secondary button-small product-view-button" type="button">
+                View details
+              </button>
+              <button class="button button-small product-add-button" type="button">Add to bag</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <section class="product-modal" id="productModal" aria-hidden="true">
+      <div class="product-modal-backdrop" data-close-modal="true"></div>
+      <div class="product-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="modalCloseButton" type="button" aria-label="Close product details">
+          ×
+        </button>
+
+        <div class="modal-layout">
+          <div class="modal-gallery">
+            <img id="modalImage" alt="" />
+            <div class="modal-gallery-strip">
+              <span class="chip" id="modalBadge"></span>
+              <span class="modal-rating">4.8/5 favorite fit</span>
+            </div>
+          </div>
+
+          <div class="modal-details">
+            <div class="modal-head">
+              <p class="eyebrow" id="modalCategory">Category</p>
+              <h2 id="modalTitle">Product name</h2>
+              <p class="modal-price-row">
+                <strong id="modalPrice">$0</strong>
+                <span id="modalOldPrice"></span>
+              </p>
+            </div>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <div class="modal-points" id="modalHighlights"></div>
+
+            <div class="modal-meta-grid">
+              <article>
+                <span>Material</span>
+                <strong id="modalMaterial"></strong>
+              </article>
+              <article>
+                <span>Fit</span>
+                <strong id="modalFit"></strong>
+              </article>
+              <article>
+                <span>Best for</span>
+                <strong id="modalOccasion"></strong>
+              </article>
+              <article>
+                <span>Delivery</span>
+                <strong id="modalDelivery"></strong>
+              </article>
+            </div>
+
+            <div class="selector-group">
+              <p>Choose size</p>
+              <div class="size-options" id="sizeOptions"></div>
+            </div>
+
+            <div class="purchase-row">
+              <label class="quantity-box">
+                <span>Qty</span>
+                <div class="quantity-controls">
+                  <button id="qtyMinus" type="button" aria-label="Decrease quantity">−</button>
+                  <strong id="qtyValue">1</strong>
+                  <button id="qtyPlus" type="button" aria-label="Increase quantity">+</button>
+                </div>
+              </label>
+
+              <button class="button modal-add-button" id="modalAddButton" type="button">Add to bag</button>
+            </div>
+
+            <div class="modal-story">
+              <h3>Product story</h3>
+              <p id="modalStory"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-products">
+          <div class="related-heading">
+            <h3>You may also like</h3>
+            <p>More clean fits from the same cozy moodboard.</p>
+          </div>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
